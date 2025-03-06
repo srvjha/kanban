@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    /* background: linear-gradient(to right, #e3f2fd, #bbdefb); */
+}
+
+#nav {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: 25px;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#kanban-icon {
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+#kanban-methods {
+    display: flex;
+    gap: 20px;
+}
+
+#add-board {
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 6px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-board:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+.boards-container {
+    display: flex;
+    gap: 20px; 
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    margin-top: 10px;
+    max-width: 90%; 
+}
+
+.boards {
+    padding: 20px;
+    height: 82vh;
+    width: 25vw;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow-y: scroll;
+    
+}
+.boards::-webkit-scrollbar {
+    display: none;
+  }
+
+.boards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.board-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #021220;
+    color: rgb(244, 237, 237);
+    border-radius: 8px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height:220px;
+    cursor:grabbing;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+
+}
+#task-desc{
+    margin-top: 6px;
+    overflow-y: scroll;
+   
+}
+
+#task-desc::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.task:hover {
+    transform: scale(1.05);
+}
+
+.board-end{
+    display: flex;
+    margin-top:10px;
+    gap: 10px;
+}
+
+#tags{
+    display: flex;
+    gap: 5px;
+}
+
+#tags > *{
+    background-color: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+#priority{
+    background-color: red;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 10px;
+}
+
+
+.edit-btn, .delete-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.edit-btn:hover {
+    transform: scale(1.2);
+    color: blue;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+
+.add-item{
+   background-color: black;
+   font-size: 40px;
+   color: white;
+   width: 50px;
+   height: 50px;
+   /* padding: 0px 5px; */
+   border-radius: 50%;
+   text-align: center;
+   position: absolute;
+   top:90%;
+   left: 85%;
+   cursor: pointer;
+}
